@@ -5,7 +5,7 @@ h1 {
 	font-family: "Verdana";
 }
 body {
-	background-image: url(%{background_path});
+	background-image: url("../images/1.jpg");
 	background-size: cover;
 }
 div.welcome {

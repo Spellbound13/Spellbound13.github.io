@@ -5,13 +5,13 @@ header_template='<!DOCTYPE html>
 	<head>
 		<meta charset="utf-8">
 		<title>Spellbound\'s world</title>
-		<link rel="stylesheet" type="text/css" href="styles/site_styles.css">
+		<link rel="stylesheet" type="text/css" href="%{styles_path}">
 	</head>
 	<body>
 		<h1>Spellbound\'s world</h1>' 
-header_home=header_template	% {background_path: 'images/1.jpg'}
-header_bg=header_template % {background_path: 'images/1.jpg'}
-header_en=header_template % {background_path: 'images/1.jpg'}
+header_home=header_template	% {styles_path: 'styles/site_styles.css'}
+header_bg=header_template % {styles_path: '../styles/site_styles.css'}
+header_en=header_template % {styles_path: '../styles/site_styles.css'}
 welcome='<div class="welcome">
 			<ul>
 				<em>
