@@ -1,0 +1,300 @@
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):007:0> '<h1>%{title}</h1>' % {title='Maria'}
+SyntaxError: (irb):7: syntax error, unexpected '}', expecting tASSOC
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):008:0> '<h1>%{title}</h1>' % {title: 'Maria'}
+=> "<h1>Maria</h1>"
+irb(main):009:0> '<h1>%{title}</h1>' % {:title => 'Maria'}
+=> "<h1>Maria</h1>"
+irb(main):010:0> '<h1>%{title}</h1>'.%({:title => 'Maria'})
+=> "<h1>Maria</h1>"
+irb(main):011:0> '<h1>%{title}</h1>'.sprintf({:title => 'Maria'})
+NoMethodError: private method `sprintf' called for "<h1>%{title}</h1>":String
+        from (irb):11
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):012:0> 10%3
+=> 1
+irb(main):013:0> 11%3
+=> 2
+irb(main):014:0> 10.%({3})
+SyntaxError: (irb):14: syntax error, unexpected '}', expecting tASSOC
+10.%({3})
+        ^
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):015:0> 10.%({=>3})
+SyntaxError: (irb):15: syntax error, unexpected tASSOC, expecting '}'
+10.%({=>3})
+        ^
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):016:0> 10.%(3)
+=> 1
+irb(main):017:0> 5.+(3)
+=> 8
+irb(main):018:0> 'test'+'1'
+=> "test1"
+irb(main):019:0> 'test'.+('1')
+=> "test1"
+irb(main):020:0> 5.+('1')
+TypeError: String can't be coerced into Fixnum
+        from (irb):20:in `+'
+        from (irb):20
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):021:0> '5'.+('1')
+=> "51"
+irb(main):022:0> 5.'test'
+SyntaxError: (irb):22: syntax error, unexpected tSTRING_BEG
+5.'test'
+   ^
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):023:0> 'test'.5
+SyntaxError: (irb):23: no .<digit> floating literal anymore; put 0 before dot
+'test'.5
+       ^
+(irb):23: syntax error, unexpected tINTEGER
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):024:0> 'test'.(5)
+NoMethodError: undefined method `call' for "test":String
+        from (irb):24
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):025:0> 5.('test')
+NoMethodError: undefined method `call' for 5:Fixnum
+        from (irb):25
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):026:0> 5.*('test')
+TypeError: String can't be coerced into Fixnum
+        from (irb):26:in `*'
+        from (irb):26
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):027:0> 'test'.*(5)
+=> "testtesttesttesttest"
+irb(main):028:0> test*5
+ArgumentError: wrong number of arguments (0 for 2..3)
+        from (irb):28:in `test'
+        from (irb):28
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):029:0> test * 5
+ArgumentError: wrong number of arguments (0 for 2..3)
+        from (irb):29:in `test'
+        from (irb):29
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):030:0> 'test' * 5
+=> "testtesttesttesttest"
+irb(main):031:0> {}
+=> {}
+irb(main):032:0> Hash
+=> Hash
+irb(main):033:0> Hash.new
+=> {}
+irb(main):034:0> Hash.new()
+=> {}
+irb(main):035:0> hash.new
+NoMethodError: undefined method `new' for 740157094:Fixnum
+        from (irb):35
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):036:0> String
+=> String
+irb(main):037:0> Peter
+NameError: uninitialized constant Peter
+        from (irb):37
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):038:0> String.new
+=> ""
+irb(main):039:0> String.new(new_string)
+NameError: undefined local variable or method `new_string' for main:Object
+        from (irb):39
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):040:0> String.new('new_string')
+=> "new_string"
+irb(main):041:0> String.new(String.new)
+=> ""
+irb(main):042:0> "".class
+=> String
+irb(main):043:0> "test".class
+=> String
+irb(main):044:0> "test".class.new
+=> ""
+irb(main):045:0> "test".class.new.class
+=> String
+irb(main):046:0> 1.clas
+NoMethodError: undefined method `clas' for 1:Fixnum
+        from (irb):46
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):047:0> 1.class
+=> Fixnum
+irb(main):048:0> {}.class
+=> Hash
+irb(main):049:0> "test".class.class
+=> Class
+irb(main):050:0> class.class
+SyntaxError: (irb):50: syntax error, unexpected '.'
+class.class
+      ^
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):051:0> Class.class
+=> Class
+irb(main):052:0> :.class
+SyntaxError: (irb):52: syntax error, unexpected '.', expecting tSTRING_CONTENT or tSTRING_DBEG or tS
+TRING_DVAR or tSTRING_END
+:.class
+  ^
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):053:0> :test.class
+=> Symbol
+irb(main):054:0> [].class
+=> Array
+irb(main):055:0> ().class
+=> NilClass
+irb(main):056:0> nil
+=> nil
+irb(main):057:0> nil.class
+=> NilClass
+irb(main):058:0> true.class
+=> TrueClass
+irb(main):059:0> false.class
+=> FalseClass
+irb(main):060:0> ["test", "new", 5, :test]
+=> ["test", "new", 5, :test]
+irb(main):061:0> ["test", "new", 5, :test].count
+=> 4
+irb(main):062:0> ["test", "new", 5, :test].count.class
+=> Fixnum
+irb(main):063:0> ["test", "new", 5, :test].+[{}]
+ArgumentError: wrong number of arguments(0 for 1)
+        from (irb):63:in `+'
+        from (irb):63
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):064:0> ["test", "new", 5, :test, [{}]]
+=> ["test", "new", 5, :test, [{}]]
+irb(main):065:0> {}
+=> {}
+irb(main):066:0> dict = {}
+=> {}
+irb(main):067:0> dict
+=> {}
+irb(main):068:0> dict.class
+=> Hash
+irb(main):069:0> dict.count
+=> 0
+irb(main):070:0> dict.update(bla, bla)
+NameError: undefined local variable or method `bla' for main:Object
+        from (irb):70
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):071:0> dict.update("bla", "duh")
+ArgumentError: wrong number of arguments(2 for 1)
+        from (irb):71:in `update'
+        from (irb):71
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):072:0> dict.update("bla", 13)
+ArgumentError: wrong number of arguments(2 for 1)
+        from (irb):72:in `update'
+        from (irb):72
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):073:0> dict.update{(13)}
+ArgumentError: wrong number of arguments(0 for 1)
+        from (irb):73:in `update'
+        from (irb):73
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):074:0> dict.update("bla"=13)
+SyntaxError: (irb):74: syntax error, unexpected '=', expecting ')'
+dict.update("bla"=13)
+                  ^
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):075:0> dict.update("bla" => 13)
+=> {"bla"=>13}
+irb(main):076:0> dict
+=> {"bla"=>13}
+irb(main):077:0> dict.update("bla" => 13, "duh" => 7)
+=> {"bla"=>13, "duh"=>7}
+irb(main):078:0> dict.update({"bum" => 9})
+=> {"bla"=>13, "duh"=>7, "bum"=>9}
+irb(main):079:0> dict.update({"bum" => 21})
+=> {"bla"=>13, "duh"=>7, "bum"=>21}
+irb(main):080:0> dict.delete({"bum" => 21})
+=> nil
+irb(main):081:0> dict.delete("bum")
+=> 21
+irb(main):082:0> dict
+=> {"bla"=>13, "duh"=>7}
+irb(main):083:0> []=
+irb(main):084:0* ("bum", 21)
+SyntaxError: (irb):83: syntax error, unexpected '=', expecting $end
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):085:0> dict.[]=("bum", 21)
+=> 21
+irb(main):086:0> dict
+=> {"bla"=>13, "duh"=>7, "bum"=>21}
+irb(main):087:0> dict2=({"ha"=>9})
+=> {"ha"=>9}
+irb(main):088:0> dict.update(dict2)
+=> {"bla"=>13, "duh"=>7, "bum"=>21, "ha"=>9}
+irb(main):089:0> dict["ha"] = 9
+=> 9
+irb(main):090:0> dict
+=> {"bla"=>13, "duh"=>7, "bum"=>21, "ha"=>9}
+irb(main):091:0> "test".%(dict)
+=> "test"
+irb(main):092:0> "" % dict
+=> ""
+irb(main):093:0> "%{duh}" % dict
+KeyError: key{duh} not found
+        from (irb):93:in `%'
+        from (irb):93
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):094:0> "%{duh}".%(dict)
+KeyError: key{duh} not found
+        from (irb):94:in `%'
+        from (irb):94
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):095:0> "%{"duh"}".%(dict)
+SyntaxError: (irb):95: syntax error, unexpected tIDENTIFIER, expecting $end
+"%{"duh"}".%(dict)
+       ^
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):096:0> "%{duh}".%(dict)
+KeyError: key{duh} not found
+        from (irb):96:in `%'
+        from (irb):96
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):097:0> "%{duh}" % (dict)
+KeyError: key{duh} not found
+        from (irb):97:in `%'
+        from (irb):97
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):098:0> dict
+=> {"bla"=>13, "duh"=>7, "bum"=>21, "ha"=>9}
+irb(main):099:0> "%{h}" %{bum}
+SyntaxError: (irb):99: syntax error, unexpected '}', expecting tASSOC
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):100:0> "%{h}" %(bum)
+NameError: undefined local variable or method `bum' for main:Object
+        from (irb):100
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):101:0> "h %{bum}" %(bum)
+NameError: undefined local variable or method `bum' for main:Object
+        from (irb):101
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):102:0> "h %{bum}" %{bum}
+SyntaxError: (irb):102: syntax error, unexpected '}', expecting tASSOC
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):103:0> "h %{bum}" % dict
+KeyError: key{bum} not found
+        from (irb):103:in `%'
+        from (irb):103
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):104:0> dict
+=> {"bla"=>13, "duh"=>7, "bum"=>21, "ha"=>9}
+irb(main):105:0> "h %{bum}" % dict
+KeyError: key{bum} not found
+        from (irb):105:in `%'
+        from (irb):105
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):106:0> dict[:bum=21]
+SyntaxError: (irb):106: syntax error, unexpected tINTEGER, expecting ']'
+dict[:bum=21]
+            ^
+        from C:/RailsInstaller/Ruby1.9.3/bin/irb:12:in `<main>'
+irb(main):107:0> dict[:bum] = 21
+=> 21
+irb(main):108:0> "h %{bum}" % dict
+=> "h 21"
+irb(main):109:0>
