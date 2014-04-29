@@ -9,6 +9,9 @@ template = '<!DOCTYPE html>
 	</head>
 	<body>
 		<h1>Spellbound\'s world</h1>
+		<div class="motto">
+			<em>%{motto}</em>
+		</div>
 		<div class="social">
 			<h3>%{social}</h3>
 			<ul>
@@ -57,7 +60,7 @@ template = '<!DOCTYPE html>
 </html>'
 
 bg_text = {
-	title: '"Ако имах собствен свят, всичко би било безсмислица.<br/>
+	motto: '"Ако имах собствен свят, всичко би било безсмислица.<br/>
 		Нищо не би било каквото е, защото всичко би било каквото не е..."',
 	social: 'Чародейства...',
 	facebook: 'Книгата с лицата',
@@ -70,7 +73,7 @@ bg_text = {
 }
 
 en_text = {
-	title: '"If I had a world of my own, everything would be nonsense.<br/>
+	motto: '"If I had a world of my own, everything would be nonsense.<br/>
 	   Nothing would be what it is, because everything would be what it isn\'t..."',
 	social: 'Charms...',
 	facebook: 'Book of faces',
