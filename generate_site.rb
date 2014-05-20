@@ -59,31 +59,34 @@ template = '<!DOCTYPE html>
 	</body>
 </html>'
 
-bg_text = {
-	motto: '"Ако имах собствен свят, всичко би било безсмислица.<br/>
-		Нищо не би било каквото е, защото всичко би било каквото не е..."',
-	social: 'Чародейства...',
-	facebook: 'Книгата с лицата',
-	twitter: 'Чуруликанки',
-	youtube: 'Музикалната кутия',
-	duolingo: 'Зелени сови',
-	work: '...и заклинания',
-	capital: 'Мария в Кръга',
-	mail: 'Писма в бутилка',
+all_translations = {
+	"bg" => {
+		motto: '"Ако имах собствен свят, всичко би било безсмислица.<br/>
+			Нищо не би било каквото е, защото всичко би било каквото не е..."',
+		social: 'Чародейства...',
+		facebook: 'Книгата с лицата',
+		twitter: 'Чуруликанки',
+		youtube: 'Музикалната кутия',
+		duolingo: 'Зелени сови',
+		work: '...и заклинания',
+		capital: 'Мария в Кръга',
+		mail: 'Писма в бутилка',
+	},
+	"en" => {
+		motto: '"If I had a world of my own, everything would be nonsense.<br/>
+		   Nothing would be what it is, because everything would be what it isn\'t..."',
+		social: 'Charms...',
+		facebook: 'Book of faces',
+		twitter: 'Chirping about',
+		youtube: 'Music box',
+		duolingo: 'Green owls',
+		work: '...and incantations',
+		capital: 'Maria in the Circle',
+		mail: 'Letters in a bottle',
+	},
 }
+all_translations.each do |name, translation| 
+	File.write "./#{name}/test.html", template%translation
+end
 
-en_text = {
-	motto: '"If I had a world of my own, everything would be nonsense.<br/>
-	   Nothing would be what it is, because everything would be what it isn\'t..."',
-	social: 'Charms...',
-	facebook: 'Book of faces',
-	twitter: 'Chirping about',
-	youtube: 'Music box',
-	duolingo: 'Green owls',
-	work: '...and incantations',
-	capital: 'Maria in the Circle',
-	mail: 'Letters in a bottle',
-}
-
-File.write "./bg/test.html", template%bg_text
-File.write "./en/test.html", template%en_text
+puts "yay"
