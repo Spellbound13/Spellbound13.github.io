@@ -1,0 +1,25 @@
+print "Hello, players!\n"
+print "Player 1, make your choice!\n"
+choice_1 = gets.chomp.downcase
+print "Player 2, make your choice!\n"
+choice_2 = gets.chomp.downcase
+
+if choice_1 == "rock" and choice_2 == "paper"
+	puts "Player 2 wins!"
+elsif choice_1 == "rock" and choice_2 == "scissors"
+	puts "Player 1 wins!"
+elsif choice_1 == "rock" and choice_2 == "rock"
+	puts "Tie! Play again!"
+elsif choice_1 == "paper" and choice_2 == "scissors"
+	puts "Player 2 wins!"
+elsif choice_1 == "paper" and choice_2 == "rock"
+	puts "Player 1 wins!"
+elsif choice_1 == "paper" and choice_2 =="paper"
+	puts "Tie! Play again!"
+elsif choice_1 == "scissors" and choice_2 == "paper"
+	puts "Player 1 wins"
+elsif choice_1 == "scissors" and choice_2 == "rock"
+	puts "Player 2 wins!"
+elsif choice_1 == "scissors" and choice_2 == "scissors"
+	puts "Tie! Play again!"
+end 
