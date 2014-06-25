@@ -1,19 +1,19 @@
 print "Hello, players!\n"
 print "Player 1, make your choice!\n"
+player1_wins = {"rock"=>"scissors", "scissors"=>"paper", "paper"=>"rock",}
+
 choice_1 = gets.chomp.downcase
-while (choice_1 != "rock") and (choice_1 != "paper") and (choice_1 != "scissors")
+while (player1_wins.keys.include? choice_1) == false
 	puts "Invalid choice!"
 	choice_1 = gets.chomp.downcase
 end
 
 print "Player 2, make your choice!\n"
 choice_2 = gets.chomp.downcase
-while (choice_2 != "rock") and (choice_2 != "paper") and (choice_2 != "scissors")
+while (player1_wins.keys.include? choice_2) == false
 	puts "Invalid choice!"
 	choice_2 = gets.chomp.downcase
 end
-
-player1_wins = {"rock"=>"scissors", "scissors"=>"paper", "paper"=>"rock",}
 
 if choice_1 == choice_2
 	puts "Tie! Play again!"
