@@ -4,22 +4,12 @@ choice_1 = gets.chomp.downcase
 print "Player 2, make your choice!\n"
 choice_2 = gets.chomp.downcase
 
-if choice_1 == "rock" and choice_2 == "paper"
-	puts "Player 2 wins!"
-elsif choice_1 == "rock" and choice_2 == "scissors"
+player1_wins = {"rock"=>"scissors", "scissors"=>"paper", "paper"=>"rock",}
+
+if choice_1 == choice_2
+	puts "Tie! Play again!"
+elsif player1_wins[choice_1] == choice_2
 	puts "Player 1 wins!"
-elsif choice_1 == "rock" and choice_2 == "rock"
-	puts "Tie! Play again!"
-elsif choice_1 == "paper" and choice_2 == "scissors"
+else 
 	puts "Player 2 wins!"
-elsif choice_1 == "paper" and choice_2 == "rock"
-	puts "Player 1 wins!"
-elsif choice_1 == "paper" and choice_2 =="paper"
-	puts "Tie! Play again!"
-elsif choice_1 == "scissors" and choice_2 == "paper"
-	puts "Player 1 wins"
-elsif choice_1 == "scissors" and choice_2 == "rock"
-	puts "Player 2 wins!"
-elsif choice_1 == "scissors" and choice_2 == "scissors"
-	puts "Tie! Play again!"
-end 
+end

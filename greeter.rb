@@ -58,20 +58,20 @@ shopping_template = "<!DOCTYPE html>
  <body>
    <table border='1' style='width:300px'>
    <tr>
-		<td>article</td>
-		<td>price</td>
-		<td>tax</td>
-		<td>end price</td>
-		<td>ammount</td>
-		<td>total price</td>
+		<td>Article</td>
+		<td>Price</td>
+		<td>Tax</td>
+		<td>End price</td>
+		<td>Ammount</td>
+		<td>Total price</td>
 	</tr>
      #{rows}
    <tr>
-		<td>overall bill is</td>
+		<td>Overall bill is</td>
 		<td></td>
 		<td></td>
-		<td></td>
-		<td></td>
+		<td></td
+>		<td></td>
 		<td>#{sum}</td>
 	</tr>  
    </table> 
